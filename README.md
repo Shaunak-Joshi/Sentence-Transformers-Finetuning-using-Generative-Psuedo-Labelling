@@ -1,4 +1,4 @@
-**FINETUNING SENTENCE TRANSFORMER BI-ENCODERS TO NFCORPUS**
+### **FINETUNING SENTENCE TRANSFORMER BI-ENCODERS TO NFCORPUS**
 
 This repository provides you with a Python script that automates the process of training a specific Sentence Transformer model to defined knowledge base. The dataset selected is the NFCorpus dataset. 
 
