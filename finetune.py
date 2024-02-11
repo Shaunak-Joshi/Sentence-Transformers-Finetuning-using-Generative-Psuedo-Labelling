@@ -87,3 +87,4 @@ class Train:
 if __name__=="__main__":
     t = Train(device="cuda")
     model,evalBefore,evalAfter = t.trainModel()
+    print(f"Evaluation results: {evalBefore} and {evalAfter}")
