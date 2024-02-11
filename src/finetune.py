@@ -70,7 +70,7 @@ class Train:
       self
       ) -> SentenceTransformer:
         
-        self.preProcessing()
+        self.preProcessing()  
         before = self.test_evaluator(self.model)
         self.model.fit(
             train_objectives = [(self.train_dataloader, self.train_loss)],
