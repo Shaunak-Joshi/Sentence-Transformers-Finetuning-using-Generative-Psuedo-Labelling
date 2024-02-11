@@ -86,4 +86,4 @@ class Train:
 
 if __name__=="__main__":
     t = Train(device="cuda")
-    # model,evalBefore,evalAfter = t.trainModel()
+    model,evalBefore,evalAfter = t.trainModel()
