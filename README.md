@@ -10,3 +10,15 @@ This python script can be reproduced and modified for any BeIR dataset required.
 ## **USAGE**
 Make sure you have the NF Corpus installed. Link: https://www.cl.uni-heidelberg.de/statnlpgroup/nfcorpus/
 1. Change Directory to the Pre-Processing Directory
+   ```
+   cd Pre-Processing
+   ```
+2. Run preprocessing.py
+   ```
+   python preprocessing.py
+   ```
+3. Now you will have three pickle files in the Pre-Processing Folder
+4. Run finetune.py
+   ```
+   python finetune.py
+   ```
