@@ -20,14 +20,14 @@ class Train:
     save_best_model: bool= True,
     show_progres_bar: bool = True,
     ) -> None:
-      if not (os.path.exists(os.path.join(os.getcwd(),'trainSamples.pkl'))):
+      if not (os.path.exists(os.path.join(os.getcwd(),'Pre-Processing','trainSamples.pkl'))):
         print("The current directory does not contain pickle files needed. Please move to that local directory")
       else:
-        with open(os.path.join(os.getcwd(),'trainSamples.pkl'),"rb") as file:
+        with open(os.path.join(os.getcwd(),'Pre-Processing','trainSamples.pkl'),"rb") as file:
             self.train = pickle.load(file)
-        with open(os.path.join(os.getcwd(),'testSamples.pkl'),"rb") as file:
+        with open(os.path.join(os.getcwd(),'Pre-Processing','testSamples.pkl'),"rb") as file:
             self.test = pickle.load(file)
-        with open(os.path.join(os.getcwd(),'devSamples.pkl'),"rb") as file:
+        with open(os.path.join(os.getcwd(),'Pre-Processing','devSamples.pkl'),"rb") as file:
             self.dev = pickle.load(file)
 
         self.model = SentenceTransformer(f"sentence-transformers/{modelName}",device=device)
