@@ -1,4 +1,5 @@
 from torch.utils.data import DataLoader
+import torch
 import math
 from sentence_transformers import models, losses
 from sentence_transformers import LoggingHandler, SentenceTransformer, util, InputExample, CrossEncoder
@@ -85,6 +86,6 @@ class Train:
         return self.model,before,after
 
 if __name__=="__main__":
-    t = Train(device="cuda")
+    t = Train(device="cuda" if torch.cuda.is_available() else "cpu")
     model,evalBefore,evalAfter = t.trainModel()
     print(f"Evaluation results: {evalBefore} and {evalAfter}")
